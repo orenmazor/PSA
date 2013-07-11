@@ -20,5 +20,15 @@ module Intercom
       msg = "ah " * length
       broadcast(msg,"Bells")
     end
+
+    VOICES = ["Agnes","Albert","Alex","Bad News","Bahh","Bells","Boing","Bruce","Bubbles","Cellos","Deranged","Fred","Good News","Hysterical","Junior","Kathy","Pipe Organ","Princess","Ralph","Trinoids","Vicki","Victoria","Whisper","Zarvox"]
+
+    VOICES.each_with_index do |voice_name, i|
+        class_eval <<-RUBY, __FILE__, __LINE__ + 1
+          def #{voice_name.downcase.tr(' ','_')}(msg)
+            broadcast(msg,"#{voice_name}")
+          end
+        RUBY
+      end
   end
 end
