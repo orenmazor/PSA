@@ -8,7 +8,7 @@ module Intercom
     end
 
     def broadcast(msg,voice=nil)
-      url = URI('http://intercom.shopifyapps.com')
+      url = URI(@uri)
       msg = "#{msg} -v #{voice}" if voice
       url.query = URI.encode_www_form({:message=>"#{msg}"})
 
