@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PSA::VERSION
   spec.authors       = ["Oren Mazor"]
   spec.email         = ["oren.mazor@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Make working with Intercom easier}
+  spec.summary       = %q{Make working with Intercom easier}
   spec.homepage      = ""
   spec.license       = "MIT"
 
